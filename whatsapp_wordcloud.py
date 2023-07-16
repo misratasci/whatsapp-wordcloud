@@ -4,10 +4,10 @@ import wordcloud
 import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-chat_file = "kerem_chat.txt"
+chat_file = "chat.txt"
 
 filecp = codecs.open(chat_file, encoding = "utf8")
-df = pd.read_csv("kerem_chat.txt", header = None, sep= ": ", on_bad_lines='warn')
+df = pd.read_csv(chat_file, header = None, sep= ": ", on_bad_lines='warn')
 df = df[df[1] != "<Media omitted>"]
 df = df[df[1] != "This message was deleted"]
 
